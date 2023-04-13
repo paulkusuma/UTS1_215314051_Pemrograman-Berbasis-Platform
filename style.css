@@ -4,3 +4,11 @@
     display: flex;
     background-color: #333232;
 }
+
+.section:nth-child(odd) {
+    background-color: #b60000;
+}
+
+.section:nth-child(even) {
+    background-color: #e4e3ce;
+}

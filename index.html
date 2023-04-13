@@ -47,12 +47,18 @@
 
     <!-- Scrollspy main content Start-->
     <main data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+      
       <!-- Beranda Section Start -->
       <section id="beranda" class="section">
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <h1 class="display-10">Fluid jumbotron</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <div class="row justify-content-center">
+          <div class="col-5">
+            <div class="jumbotron ">
+              <h1 class="display-5">Hello, world!</h1>
+              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-5">
+              <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </div>
           </div>
         </div>
       </section>
@@ -60,25 +66,161 @@
 
       <!-- Tentang Section Start -->
       <section id="tentang" class="section">
-        <h1>Tentang</h1>
+        <div class="container">
+          <div class="row text-center m-5">
+            <div class="col">
+              <h2>Tentang Saya</h2>
+            </div>
+          </div>
+        
+          <div class="row justify-content-center text-center m-5">
+            <div class="col-md-6">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptates laboriosam corporis voluptatem delectus dolorem rerum, dolores similique in sapiente nisi voluptate saepe incidunt deserunt perspiciatis officiis. Dignissimos, rerum alias.</p>
+            </div>
+            <div class="col-md-6">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi, sequi iure maxime minima at repudiandae delectus. Asperiores, fugiat voluptates.</p>
+            </div>
+          </div>
+       
+        </div>
       </section>
       <!-- Tentang Section End -->
 
       <!-- Kisahku Section Start -->
       <section id="kisahku" class="section">
-        <h1>Kisahku</h1>
+        <div class="container">
+          <div class="row text-center m-4">
+            <div class="col">
+              <h2>KisahKu</h2>
+            </div>
+          </div>
+            <div class="row justify-content-center m-1">
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <img src=".." class="card-img-top" alt="1">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="2">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="2">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+        </div>
       </section>
       <!-- Kisahku Section End -->
 
       <!-- Pendidikan Section Start -->
       <section id="pendidikan" class="section">
-        <h1>Pendidikan</h1>
+        <div class="container">
+          <div class="row text-center m-4">
+            <div class="col">
+              <h2>Pendidikan</h2>
+            </div>
+          </div>
+          <div class="row m-5">
+            <div class="col">
+              <table class="table table-dark table-hover">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">Tahun</th>
+                    <th scope="col">Nama Sekolah</th>
+                    <th scope="col">Alamt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                </tbody>
+              
+              </table>
+            </div>
+          </div>
       </section>
       <!-- Pendidikan Section End -->
 
       <!-- Pendidikan Section Start -->
       <section id="tugas" class="section">
-        <h1>Tugas</h1>
+       <div class="container">
+        <div class="row text-center m-3">
+          <div class="col">
+            <h2>TUGAS</h2>
+          </div>
+        </div>
+        <div>
+          <div id="InputNama">
+            <h3>
+              Nama :<input
+                type="text"
+                id="dataInputNama"
+                placeholder="masukan nama"
+              />
+            </h3>
+          </div>
+          <div id="inputJumlah">
+            <h3>
+              Jumlah Pilihan :<input
+                type="number"
+                id="dataInputJumlah"
+                placeholder="jumlah"
+              />
+            </h3>
+          </div>
+          <button onclick="tampilMasukanJumlahPilihan()">OK</button>
+        </div>
+    
+        <div>
+          <div id="isi"></div>
+          <button id="tombolOKPilihan" style="display: none">OK</button>
+          <br />
+          <form></form>
+        </div>
+    
+        <div>
+          <button id="tampilkanData"onclick="tampilkanDataTerpilih()"style="display: none">OK</button>
+    
+          <div id="containerOutput">
+            <p id="hasilTampil"></p>
+          </div>
+        </div>
+       </div>
       </section>
       <!-- Pendidikan Section End -->
     </main>
@@ -98,5 +240,8 @@
         }
       });
     </script>
+
+    <!-- Js Tugas -->
+    <script src="javaScript.js"></script>
   </body>
 </html>
