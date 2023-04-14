@@ -1,9 +1,15 @@
 function tampilMasukanJumlahPilihan() {
   var nama = document.getElementById('dataInputNama').value;
+  var namaB = document.getElementById('dataInputNamaBelakang').value;
+  var email = document.getElementById('dataEmail').value;
   //Eror traping Input nama
   if (nama.trim() === '') {
     alert('Masukkan nama Anda!');
     return;
+  } else if (namaB.trim() === '') {
+    alert('Masukan nama belakang Anda!');
+  } else if (email.trim() === '') {
+    alert('Masukan Email Anda!');
   }
 
   var jumlah = parseInt(document.getElementById('dataInputJumlah').value);
@@ -26,16 +32,16 @@ document.getElementById('tombolOKPilihan').addEventListener('click', function ()
   var jumlah = parseInt(document.getElementById('dataInputJumlah').value);
   for (var i = 1; i <= jumlah; i++) {
     var inputPilihan = document.getElementById('inputPilihan' + i);
-    var radioPilihan = document.createElement('input');
-    radioPilihan.type = 'radio';
-    radioPilihan.id = 'radioPilihan' + i;
-    radioPilihan.name = 'pilihan';
-    radioPilihan.value = inputPilihan.value;
+    var checkboxPilihan = document.createElement('input');
+    checkboxPilihan.type = 'checkbox';
+    checkboxPilihan.id = 'checkboxPilihan' + i;
+    checkboxPilihan.name = 'pilihan';
+    checkboxPilihan.value = inputPilihan.value;
 
     var label = document.createElement('label');
-    label.for = 'radioPilihan' + i;
+    label.for = 'checkboxPilihan' + i;
     label.textContent = 'Pilihan ' + i + ' : ' + inputPilihan.value;
-    document.querySelector('form').appendChild(radioPilihan);
+    document.querySelector('form').appendChild(checkboxPilihan);
     document.querySelector('form').appendChild(label);
     document.querySelector('form').appendChild(document.createElement('br'));
   }
@@ -43,15 +49,16 @@ document.getElementById('tombolOKPilihan').addEventListener('click', function ()
 });
 
 function tampilkanDataTerpilih() {
-  var radioButtons = document.getElementsByName('pilihan');
+  var checkboxs = document.getElementsByName('pilihan');
   var dataTerpilih = '';
-  for (var i = 0; i < radioButtons.length; i++) {
-    if (radioButtons[i].checked) {
-      dataTerpilih = radioButtons[i].value;
-      break;
+  for (var i = 0; i < checkboxs.length; i++) {
+    if (checkboxs[i].checked) {
+      dataTerpilih += checkboxs[i].value + ', ';
     }
   }
   var nama = document.getElementById('dataInputNama').value;
+  var namaB = document.getElementById('dataInputNamaBelakang').value;
+  var email = document.getElementById('dataEmail').value;
   var jumlah = document.getElementById('dataInputJumlah').value;
   var pilihan = '';
 
@@ -66,7 +73,7 @@ function tampilkanDataTerpilih() {
     pilihan += 'Pilihan ' + i + ' : ' + inputPilihan.value + ', ';
   }
 
-  var output = 'Hallo, Nama saya ' + nama + ', saya mempunyai sejumlah ' + jumlah + ' pilihan, yaitu : ' + pilihan + 'dan saya memilih ' + dataTerpilih;
+  var output = 'Hallo, Nama saya ' + nama + ' ' + namaB + ', dengan email ' + email + ' , saya mempunyai sejumlah ' + jumlah + ' pilihan hobi, yaitu : ' + pilihan + 'dan saya menyukai ' + dataTerpilih;
 
   document.getElementById('hasilTampil').innerHTML = output;
 }

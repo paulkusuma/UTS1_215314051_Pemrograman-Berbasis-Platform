@@ -13,6 +13,10 @@
     overflow: auto;
 }
 
+#tugas {
+    overflow: auto;
+}
+
 .section:nth-child(odd) {
     background-color: #b60000;
 }
@@ -32,4 +36,88 @@
 
     text-align: center;
 
+}
+
+/* Css Tugas */
+#InputNama,
+#inputJumlah {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+#InputNama input[type="text"],
+#inputJumlah input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    flex: 1;
+}
+
+#InputNama input[type="text"] {
+    border: 2px solid #ccc;
+    width: 180px;
+}
+
+#inputJumlah input[type="number"] {
+    border: 2px solid #ccc;
+    width: 95px;
+}
+
+form input[type="text"], form input[type="number"], form input[type="radio"] {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    font-size: 16px;
+}
+
+form input[type="radio"] {
+    margin-right: 5px;
+}
+
+form label {
+    font-size: 16px;
+    align-items: center;
+    line-height: 35px;
+}
+
+#isi input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0095DD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008CBA;
+}
+
+#hasilTampil {
+    text-align: center;
+    font-size: 23px;
+    color: white;
+    text-transform: capitalize;
+    float: left;
+}
+
+#hasilTampil:hover {
+    color: #0095DD;
+    transition: .4s;
 }
