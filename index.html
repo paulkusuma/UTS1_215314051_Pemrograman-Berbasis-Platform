@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UTS1_215314051</title>
+    <title>UTS_215314051</title>
     <!-- Css -->
     <link rel="stylesheet" href="style.css" />
     <!-- Bootstap CSS -->
@@ -14,7 +14,7 @@
     <!-- Start NavBar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#beranda">
           <img src="LogoPauwerfullFix.png" alt="Logo" width="100" height="40" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,7 @@
           <div class="mx-auto"></div>
           <ul class="nav navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#beranda">Beranda</a>
+              <a class="nav-link active" aria-current="page" href="#beranda">Beranda</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#tentang">Tentang</a>
@@ -50,19 +50,54 @@
       
       <!-- Beranda Section Start -->
       <section id="beranda" class="section">
-        <div class="row justify-content-center">
-          <div class="col-5">
-            <div class="jumbotron ">
-              <h1 class="display-5">Hello, world!</h1>
-              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-              <hr class="my-5">
-              <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <div class="d-flex align-items-center justify-content-center" style="height: 100%;"></div>
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col align-self-center m-5">
+                <div class="jumbotron" min-height: 70vh;>
+                  <br class="my-5">
+                  <h1 class="display-4">Paul Wijaya Verda Kusuma</h1>
+                  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                
+                  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+               </div>
+             </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- kalo gagal -->
+      <!-- <div class="container-fluid mt-3 d-flex align-items-center justify-content-center" style="height: 100vh;">
+        <div class="jumbotron text-white rounded p-5">
+          <h1>Jumbotron Example</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat..
+          </p>
+        </div>
+      </div> -->
+      <!-- Coba -->
+      <!-- <section id="beranda" class="section">
+        <div class="row text-center">
+          <div class="col">
+            <div class="container mt-3">
+              <h2>Example of Jumbotron</h2>
+              <div class="mt-4 p-5 bg-primary text-white rounded">
+                <h1>Jumbotron Example</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat..
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
       <!-- Beranda Section End -->
+
+
 
       <!-- Tentang Section Start -->
       <section id="tentang" class="section">
@@ -89,7 +124,7 @@
       <!-- Kisahku Section Start -->
       <section id="kisahku" class="section">
         <div class="container">
-          <div class="row text-center m-4">
+          <div class="row flex-warp text-center m-4">
             <div class="col">
               <h2>KisahKu</h2>
             </div>
@@ -126,7 +161,16 @@
                   </div>
                 </div>
               </div>
-             
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="2">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
       </section>
@@ -152,8 +196,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    
-                    <td>Mark</td>
+                    <td>2015</td>
                     <td>Otto</td>
                     <td>@mdo</td>
                   </tr>
@@ -176,53 +219,41 @@
       </section>
       <!-- Pendidikan Section End -->
 
-      <!-- Pendidikan Section Start -->
-      <section id="tugas" class="section">
-       <div class="container">
-        <div class="row text-center m-3">
-          <div class="col">
-            <h2>TUGAS</h2>
+      <!-- Tugas Section Start -->
+      <section id="tugas" class="section" >
+        <div class="container">
+          <div class="row text-center m-3">
+            <div class="col">
+              <h2>TUGAS</h2>
+            </div>
+          </div>
+          <div>
+            <div id="InputNama">
+              <h3>Nama :<input type="text" id="dataInputNama" placeholder="masukan nama" /></h3>
+            </div>
+            <div id="inputJumlah">
+              <h3>Jumlah Pilihan :<input type="number" id="dataInputJumlah" placeholder="jumlah" /></h3>
+            </div>
+            <button onclick="tampilMasukanJumlahPilihan()">OK</button>
+          </div>
+
+          <div>
+            <div id="isi"></div>
+            <button id="tombolOKPilihan" style="display: none">OK</button>
+            <br />
+            <form></form>
+          </div>
+
+          <div>
+            <button id="tampilkanData" onclick="tampilkanDataTerpilih()" style="display: none">OK</button>
+
+            <div id="containerOutput">
+              <p id="hasilTampil"></p>
+            </div>
           </div>
         </div>
-        <div>
-          <div id="InputNama">
-            <h3>
-              Nama :<input
-                type="text"
-                id="dataInputNama"
-                placeholder="masukan nama"
-              />
-            </h3>
-          </div>
-          <div id="inputJumlah">
-            <h3>
-              Jumlah Pilihan :<input
-                type="number"
-                id="dataInputJumlah"
-                placeholder="jumlah"
-              />
-            </h3>
-          </div>
-          <button onclick="tampilMasukanJumlahPilihan()">OK</button>
-        </div>
-    
-        <div>
-          <div id="isi"></div>
-          <button id="tombolOKPilihan" style="display: none">OK</button>
-          <br />
-          <form></form>
-        </div>
-    
-        <div>
-          <button id="tampilkanData"onclick="tampilkanDataTerpilih()"style="display: none">OK</button>
-    
-          <div id="containerOutput">
-            <p id="hasilTampil"></p>
-          </div>
-        </div>
-       </div>
       </section>
-      <!-- Pendidikan Section End -->
+      <!-- Tugas Section End -->
     </main>
     <!-- Scrollspy main content End -->
 
