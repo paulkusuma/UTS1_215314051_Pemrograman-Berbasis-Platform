@@ -1,11 +1,6 @@
-.body {}
-
 .section {
     width: 100%;
-
     height: 100vh;
-    display: flex;
-
     background-color: #0d0e0d;
 }
 
@@ -18,7 +13,7 @@
 }
 
 .section:nth-child(odd) {
-    background-color: #b60000;
+    background-color: #4e4747;
 }
 
 .section:nth-child(even) {
@@ -33,7 +28,6 @@
 
 .jumbotron {
     height: 100%;
-
     text-align: center;
 
 }
@@ -112,12 +106,12 @@ button:hover {
 #hasilTampil {
     text-align: center;
     font-size: 23px;
-    color: white;
+    color: #aa876059;
     text-transform: capitalize;
     float: left;
 }
 
 #hasilTampil:hover {
-    color: #0095DD;
+    color: #ffffff;
     transition: .4s;
 }
